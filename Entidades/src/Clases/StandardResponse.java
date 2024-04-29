@@ -25,17 +25,10 @@ public class StandardResponse extends ExchangeRate{
 
     @Override
     public String toString() {
-        return "StandardResponse{" +
-                ", conversionRates=" + conversionRates +
-                ", result='" + result + '\'' +
-              //  ", documentation='" + documentation + '\'' +
-              //  ", terms_of_use='" + terms_of_use + '\'' +
-              //  ", time_last_update_unix=" + time_last_update_unix +
-               // ", time_last_update_utc='" + time_last_update_utc + '\'' +
-               // ", time_next_update_unix=" + time_next_update_unix +
-               // ", time_next_update_utc='" + time_next_update_utc + '\'' +
-                ", base_code='" + base_code + '\'' +
-                '}';
+        return " Tipos de divisas disponibles " +
+                "\n--> Status: " + result +
+                "\n--> Moneda base: " + base_code +
+                "\n--> Tasas de cambio: " + conversionRates ;
     }
 }
 

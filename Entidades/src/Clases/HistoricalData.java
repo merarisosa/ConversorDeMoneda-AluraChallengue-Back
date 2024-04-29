@@ -55,19 +55,12 @@ public class HistoricalData extends ExchangeRate {
 
     @Override
     public String toString() {
-        return "HistoricalData{" +
-                "year=" + year +
-                ", month=" + month +
-                ", day=" + day +
-                ", conversion_rates=" + conversion_rates +
-                ", result='" + result + '\'' +
-                //", documentation='" + documentation + '\'' +
-               // ", terms_of_use='" + terms_of_use + '\'' +
-               // ", time_last_update_unix=" + time_last_update_unix +
-               // ", time_last_update_utc='" + time_last_update_utc + '\'' +
-               // ", time_next_update_unix=" + time_next_update_unix +
-               // ", time_next_update_utc='" + time_next_update_utc + '\'' +
-                ", base_code='" + base_code + '\'' +
-                '}';
+        return "Información de tasas de cambio por fecha" +
+                "\n--> Status: " + result +
+                "\n--> Año: " + year +
+                "\n--> Mes: " + month +
+                "\n--> Día: " + day +
+                "\n--> Moneda base: " + base_code +
+                "\n--> Tasa de cambio: " + conversion_rates ;
     }
 }

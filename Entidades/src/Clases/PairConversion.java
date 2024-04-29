@@ -42,34 +42,19 @@ public class PairConversion extends ExchangeRate{
 
     @Override
     public String toString() {
-        return "PairConversion{" +
-                "target_code='" + target_code + '\'' +
-                ", conversion_rate=" + conversion_rate +
-                ", conversion_result=" + conversion_result +
-                ", result='" + result + '\'' +
-               // ", documentation='" + documentation + '\'' +
-               // ", terms_of_use='" + terms_of_use + '\'' +
-               // ", time_last_update_unix=" + time_last_update_unix +
-               // ", time_last_update_utc='" + time_last_update_utc + '\'' +
-               // ", time_next_update_unix=" + time_next_update_unix +
-               // ", time_next_update_utc='" + time_next_update_utc + '\'' +
-                ", base_code='" + base_code + '\'' +
-                '}';
+        return " Conversión de divisas " +
+                "\n--> Status: " + result +
+                "\n--> Moneda base: " + base_code +
+                "\n--> Moneda destino: " + target_code +
+                "\n--> Tasa de cambio: " + conversion_rate +
+                "\n--> Tasa de conversión: " + conversion_result;
     }
 
     public String toStringNoAmount() {
-        return "PairConversion{" +
-                "target_code='" + target_code + '\'' +
-                ", conversion_rate=" + conversion_rate +
-               // ", conversion_result=" + conversion_result +
-                ", result='" + result + '\'' +
-                // ", documentation='" + documentation + '\'' +
-                // ", terms_of_use='" + terms_of_use + '\'' +
-                // ", time_last_update_unix=" + time_last_update_unix +
-                // ", time_last_update_utc='" + time_last_update_utc + '\'' +
-                // ", time_next_update_unix=" + time_next_update_unix +
-                // ", time_next_update_utc='" + time_next_update_utc + '\'' +
-                ", base_code='" + base_code + '\'' +
-                '}';
+        return " Conversión de divisas " +
+                "\n--> Status: " + result +
+                "\n--> Moneda base: " + base_code +
+                "\n--> Moneda destino: " + target_code +
+                "\n--> Tasa de cambio: " + conversion_rate;
     }
 }

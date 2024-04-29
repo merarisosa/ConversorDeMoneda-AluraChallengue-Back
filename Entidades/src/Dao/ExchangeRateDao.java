@@ -5,7 +5,6 @@ import Clases.HistoricalData;
 import Clases.PairConversion;
 import Clases.StandardResponse;
 import com.google.gson.Gson;
-
 import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
@@ -18,7 +17,6 @@ public class ExchangeRateDao {
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create(url))
-                //.uri(URI.create("https://v6.exchangerate-api.com/v6/YOUR-API-KEY/pair/EUR/GBP/AMOUNT"))
                 .build();
         HttpResponse<String> response = null;
         try {
@@ -43,7 +41,7 @@ public class ExchangeRateDao {
             throw new RuntimeException(e);
         }
 
-        System.out.println("Converted to Object: " + erConsumeAPI.toString());
+        System.out.println(erConsumeAPI.toString());
         return erConsumeAPI;
     }
 
@@ -57,7 +55,7 @@ public class ExchangeRateDao {
             throw new RuntimeException(e);
         }
 
-        System.out.println("Converted to Object: " + erConsumeAPI.toStringNoAmount());
+        System.out.println(erConsumeAPI.toStringNoAmount());
         return erConsumeAPI;
     }
 

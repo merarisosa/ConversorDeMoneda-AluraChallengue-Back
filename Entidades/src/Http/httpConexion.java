@@ -65,7 +65,6 @@ public class httpConexion {
 
         ExchangeRateDao dao = new ExchangeRateDao();
         String dataFromDao = String.valueOf(dao.pairConversionAmount(base_code, target_code, amount));
-
     }
 
     public static void getPairConversion(){
@@ -112,3 +111,16 @@ public class httpConexion {
         String dataFromDao = String.valueOf(dao.historicalData(base_code, year, month, day));
     }
 }
+/*
+ARS - Peso argentino
+BOB - Boliviano boliviano
+BRL - Real brasileño
+CLP - Peso chileno
+COP - Peso colombiano
+USD - Dólar estadounidense
+
+
+* Historial de Conversiones: Agrega la capacidad de rastrear y mostrar el historial de las últimas conversiones realizadas, brindando a los usuarios una visión completa de sus actividades.
+Soporte para Más Monedas: Amplía la lista de monedas disponibles para la elección, permitiendo a los usuarios convertir entre una variedad aún mayor de opciones monetarias.
+Registros con Marca de Tiempo: Utiliza las funciones de la biblioteca java.time para crear registros que registren las conversiones realizadas, incluyendo información sobre qué monedas se convirtieron y en qué momento.
+* */
