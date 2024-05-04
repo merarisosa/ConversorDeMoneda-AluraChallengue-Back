@@ -4,12 +4,16 @@ import Clases.EnrichedData;
 import Clases.HistoricalData;
 import Clases.PairConversion;
 import Clases.StandardResponse;
+import Enums.AvailableCoin;
+import Enums.Conversions;
 import com.google.gson.Gson;
 import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ExchangeRateDao {
 
@@ -55,6 +59,8 @@ public class ExchangeRateDao {
             throw new RuntimeException(e);
         }
 
+        System.out.println("\nTasa de cambio de "+base_code.toUpperCase()+" a "+target_code.toUpperCase()+ "...");
+       // System.out.println("--> Cantidad: " + amount + " "+base_code);
         System.out.println(erConsumeAPI.toStringNoAmount());
         return erConsumeAPI;
     }
@@ -97,4 +103,22 @@ public class ExchangeRateDao {
         System.out.println("Converted to Object: " + hdConsumeAPI.toString());
         return hdConsumeAPI;
     }
+
+    public static String showAllAvailableCoins(Enum<?>[] opciones) {
+        StringBuilder builder = new StringBuilder();
+        for (int i = 0; i < opciones.length; i++) {
+            builder.append((i + 1)).append(". ").append(opciones[i]).append("\n");
+        }
+        return builder.toString();
+    }
+
+    public static List<Conversions>  showAllConversionsList (){
+        List<Conversions> conversiones = new ArrayList<>();
+        for (Conversions conversion : Conversions.values()) {
+            conversiones.add(conversion);
+        }
+        return conversiones;
+    }
+
+
 }

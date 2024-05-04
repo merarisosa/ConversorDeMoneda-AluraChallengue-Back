@@ -51,10 +51,18 @@ public class PairConversion extends ExchangeRate{
     }
 
     public String toStringNoAmount() {
+        return  "--> Moneda base: " + base_code +
+                "\n--> Moneda destino: " + target_code +
+                "\n--> Tasa de cambio: " + conversion_rate+
+                "\n";
+    }
+    /*
+    *   public String toStringNoAmount() {
         return " Conversión de divisas " +
                 "\n--> Status: " + result +
                 "\n--> Moneda base: " + base_code +
                 "\n--> Moneda destino: " + target_code +
                 "\n--> Tasa de cambio: " + conversion_rate;
     }
+    * */
 }
